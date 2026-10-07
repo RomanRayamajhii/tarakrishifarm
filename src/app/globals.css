@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-farm-green: #15803d;
+    --color-farm-dark: #052e16;
+    --color-farm-earth: #78350f;
+    --color-farm-cream: #fefce8;
+    --color-farm-accent: #eab308;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans), sans-serif;
+    background-color: #fafbf8;
+    color: #1c2a1e;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #166534;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #14532d;
+}
+
+/* Glassmorphism effects */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(22, 101, 52, 0.12);
+}
+
+.glass-dark {
+  background: rgba(5, 46, 22, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Nepali leaf pattern background overlay */
+.bg-leaf-pattern {
+  background-image: radial-gradient(rgba(22, 163, 74, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Custom shimmer and glow */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(22, 163, 74, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(22, 163, 74, 0.8);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+/* Float animation */
+@keyframes floatSoft {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: floatSoft 4s infinite ease-in-out;
+}
